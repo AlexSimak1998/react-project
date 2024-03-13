@@ -1,0 +1,115 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 949px;
+    background-color: rgba(15, 29, 69, 0.6);
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: visibility 0s linear 0.4s, opacity 0.4s linear, transform 0.4s ease-out;
+
+    .modalContent {
+        width: 612px;
+        height: 949px;
+        background: var(--modal-color);
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+
+
+        .header {
+            display: flex;
+            justify-content: end;
+        }
+
+        .body {
+            width: 100%;
+            margin-top: 37px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            h2 {
+                line-height: 75px;
+                padding: 0 40px;
+                font-size: 50px;
+                font-family: var(--font-family-ral);
+            }
+
+        }
+
+        .footer {
+            margin-left: 35px;
+            flex-direction: column;
+            align-items: start;
+        }
+    }
+
+}
+
+
+.modal.active {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+    transition: visibility 0s linear 0s, opacity 0.4s linear, transform 0.4s ease-out;
+}
+
+.body.trueProcessed {
+    text-align: center;
+
+    h2:first-child {
+        width: 231px;
+        padding: 0;
+        margin-bottom: 98px;
+    }
+
+
+    h3 {
+        line-height: 58px;
+        font-size: 40px;
+        font-family: var(--font-family-ral);
+        width: 447px;
+    }
+}
+
+
+.logo {
+    margin-top: 209px;
+    float: right;
+    padding-right: 20px;
+}
+
+@media (max-width: 767px) {
+    .modal {
+        .modalContent {
+            padding: 10px;
+
+            .body {
+                gap: 40px;
+
+                h2 {
+                    font-size: 20px;
+                    line-height: 29.76px;
+                    font-weight: 600;
+                    padding: 0;
+                    max-width: 195px;
+                    margin-right: auto;
+                }
+            }
+            .footer {
+                margin: 0;
+            }
+        }
+
+
+    }
+
+}

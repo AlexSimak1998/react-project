@@ -1,0 +1,170 @@
+.MainComponents {
+    .MentorMobil {
+        display: none;
+    }
+    @media (max-width: 767px) {
+        .MentorMobil {
+            display: block;
+        }
+    }
+    .mentor {
+        position: absolute;
+        left: 884px;
+        bottom: 0;
+
+    }
+    p {
+        font-family: var(--font-family-ral);
+        font-size: 16px;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    div {
+
+        h1 {
+            max-width: 747px;
+            line-height: 88px;
+            text-transform: uppercase;
+            margin-top: 176px;
+            width: 100%;
+        }
+
+        .description {
+            margin-top: 53px;
+            max-width: 699px;
+            width: 100%;
+            line-height: 24px;
+            position: relative;
+            padding-left: 24px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 18%;
+                bottom: 18%;
+                border-left: 2px solid var(--text-color);
+                width: 0;
+            }
+        }
+
+
+    }
+
+    .blockBtn {
+        width: 800px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        margin-top: 64px;
+    }
+
+    .blockData {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 800px;
+        gap: 42px;
+
+
+        .numberGBP {
+            width: 190px;
+            height: 133px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 24px;
+            margin-top: 114px;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                border-left: 2px solid var(--text-color);
+                width: 0;
+            }
+
+            h3 {
+                font-size: 40px;
+                font-family: var(--font-family-ral);
+                margin-bottom: 28px;
+            }
+
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    
+    .MainComponents {
+        padding: 0 16px;
+        height: 670px;
+        position: relative;
+
+        p {
+            font-size: 11px;
+        }
+
+        .mentor {
+            right: 0;
+            bottom: 0;
+        }
+    }
+
+    .MainComponents div h1 {
+        max-width: 252px;
+        text-transform: uppercase;
+        margin-top: 66px;
+        width: 100%;
+        line-height: 34px;
+    }
+
+    .MainComponents div .description {
+        padding-left: 6px;
+        font-size: 11px;
+        margin-top: 35px;
+        max-width: 154px;
+        width: 100%;
+        line-height: 16px;
+    }
+
+
+    .MainComponents .blockBtn {
+        width: 126px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 16px;
+        margin-top: 64px;
+    }
+
+
+    .MainComponents .blockData {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 275px;
+        gap: 45px;
+        margin-top: 92px;
+
+        .numberGBP {
+            width: 53px;
+            height: 35px;
+            padding-left: 4px;
+            margin: 0px;
+        }
+       
+    }
+    .MainComponents .blockData .numberGBP h3 {
+        font-size: 16px;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+    .MentorMobil{
+        position: absolute;
+        right: 0;
+        bottom: 150px;
+
+    }
+}

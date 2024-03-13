@@ -1,0 +1,83 @@
+.App {
+    max-width: 1920px;
+    width: 100%;
+    background-image: url(./images/bgMain.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(19, 52, 87, 0.87);
+        z-index: 1;
+    }
+
+    .wrapperLine{
+        position: relative;
+        max-width: 1320px;
+        height: 949px;
+        margin: auto;
+        &::before, &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            height: 949px;
+            width: 1px;
+            background: var(--text-color);
+            z-index: 1;
+            filter: blur(0.7px); 
+            opacity: 0.3;
+        }
+    
+        &::before {
+            left: 0;
+        }
+    
+        &::after {
+            right: 0;
+        }
+    }
+
+    .wrapper {
+        position: relative;
+        max-width: 1320px;
+        height: 949px;
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        z-index: 2;
+        padding-top: 25px;
+       
+        
+
+        &::before, &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            height: 949px;
+            width: 1px;
+            background: var(--text-color);
+            z-index: 1;
+            filter: blur(1px); 
+            opacity: 0.3;
+        }
+    
+        &::before {
+            left: 31.9%;
+        }
+    
+        &::after {
+            right: 34.2%;
+        }
+
+    }
+}
+
+@media (max-width: 767px) {
+    .App{
+        height: 670px;
+    }
+}

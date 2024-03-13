@@ -1,0 +1,56 @@
+@import url(./fonts.scss);
+
+
+
+:root {
+    --main-color: rgba(19, 52, 87, 1);
+    --modal-color: rgba(7, 48, 93, 1);
+    --text-color: rgba(255, 255, 255, 1);
+
+
+    // шрифты
+    --font-family-ral: "Raleway", sans-serif;
+    --font-family-mont: "Montserrat", sans-serif;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 65px;
+    line-height: 35px;
+    font-family: var(--font-family-ral);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    color: rgba(255, 255, 255, 1);
+
+}
+
+li {
+    list-style: none;
+
+}
+
+#root {
+    height: 949px;
+    overflow: hidden;
+}
+
+@media (max-width: 767px) {
+    h1 {
+        font-size: 25px;
+        line-height: 34px;
+    }
+
+ 
+#root{
+        height: 670px;
+    }
+}
